@@ -1,9 +1,16 @@
+// Azure Functions types and the app object used to register this HTTP endpoint.
 import { app, HttpRequest, HttpResponseInit, InvocationContext } from "@azure/functions";
+// Uses your local Azure login during development and the Function App's managed
+// identity after deployment.
 import { DefaultAzureCredential } from "@azure/identity";
+// SQL Server/Azure SQL client for Node.js.
 import sql from "mssql";
 
+// Created once per function worker rather than once per request.
 const credential = new DefaultAzureCredential();
 
+// Describes the combined row returned by the Product/ProductDetail join.
+// JSON columns remain strings here and are parsed before the response is returned.
 interface ProductDetailRow {
     ProductId: number;
     Slug: string;
@@ -33,13 +40,16 @@ interface ProductDetailRow {
 }
 
 function getSqlConfig(): sql.config {
+    // Read non-secret connection details from environment variables.
     const server = process.env.SQL_SERVER;
     const database = process.env.SQL_DATABASE;
 
+    // Configuration errors should be detected before trying to connect.
     if (!server || !database) {
         throw new Error("SQL_SERVER and SQL_DATABASE must be configured");
     }
 
+    // Entra token authentication avoids storing a SQL username or password.
     return {
         server,
         database,
@@ -54,6 +64,8 @@ function getSqlConfig(): sql.config {
     };
 }
 
+// ProductDetail stores Specs, Features, Images, and Files as JSON text in NVARCHAR
+// columns. This converts that text into arrays/objects in the API response.
 function parseJson(value: string | null): unknown {
     return value === null ? null : JSON.parse(value);
 }
@@ -62,8 +74,10 @@ export async function getProductDetail(
     request: HttpRequest,
     context: InvocationContext
 ): Promise<HttpResponseInit> {
+    // The SKU identifies exactly one product. It is supplied as ?sku=...
     const sku = request.query.get("sku")?.trim();
 
+    // Reject an incomplete request before opening a database connection.
     if (!sku) {
         return {
             status: 400,
@@ -73,7 +87,9 @@ export async function getProductDetail(
 
     let pool: sql.ConnectionPool | undefined;
     try {
+        // Connect to Azure SQL using the Function App managed identity.
         pool = await sql.connect(getSqlConfig());
+        // Use a bound parameter rather than inserting sku into the SQL string.
         const result = await pool.request()
             .input("sku", sql.NVarChar(20), sku)
             .query<ProductDetailRow>(`
@@ -89,6 +105,7 @@ export async function getProductDetail(
                 WHERE p.Sku = @sku;
             `);
 
+        // An INNER JOIN returns no row if either Product or ProductDetail is missing.
         const row = result.recordset[0];
         if (!row) {
             return {
@@ -97,6 +114,8 @@ export async function getProductDetail(
             };
         }
 
+        // Build a deliberate public API shape instead of returning raw database columns.
+        // This lets the database schema change without forcing client changes.
         return {
             status: 200,
             jsonBody: {
@@ -134,16 +153,20 @@ export async function getProductDetail(
             }
         };
     } catch (error) {
+        // Record the real error in Application Insights but avoid exposing SQL details.
         context.error("Product detail lookup failed", error);
         return {
             status: 500,
             jsonBody: { error: "Unable to load product detail" }
         };
     } finally {
+        // finally runs for success and failure, preventing leaked SQL connections.
         await pool?.close();
     }
 }
 
+// Register the handler at GET /api/productdetail.
+// The Function authorization level means the caller must include a Function key.
 app.http("getProductDetail", {
     methods: ["GET"],
     authLevel: "function",
