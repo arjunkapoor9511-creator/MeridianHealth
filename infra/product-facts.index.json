@@ -1,0 +1,49 @@
+{
+  "name": "product-facts",
+  "fields": [
+    { "name": "id",               "type": "Edm.String", "key": true, "filterable": true, "retrievable": true },
+    { "name": "statement",        "type": "Edm.String", "searchable": true, "retrievable": true, "analyzer": "standard.lucene" },
+    { "name": "statement_vector", "type": "Collection(Edm.Single)", "searchable": true, "retrievable": true, "dimensions": 3072, "vectorSearchProfile": "vp" },
+    { "name": "product_name",     "type": "Edm.String", "searchable": true, "filterable": true, "facetable": true, "retrievable": true },
+    { "name": "primary_sku",      "type": "Edm.String", "filterable": true, "facetable": true, "retrievable": true },
+    { "name": "brand",            "type": "Edm.String", "filterable": true, "facetable": true, "retrievable": true },
+    { "name": "category",         "type": "Edm.String", "filterable": true, "facetable": true, "retrievable": true },
+    { "name": "component",        "type": "Edm.String", "filterable": true, "facetable": true, "retrievable": true },
+    { "name": "optional",         "type": "Edm.Boolean", "filterable": true, "facetable": true, "retrievable": true },
+    { "name": "part_number",      "type": "Edm.String", "filterable": true, "retrievable": true },
+    { "name": "applies_to_sku",   "type": "Edm.String", "filterable": true, "retrievable": true },
+    { "name": "source_file",      "type": "Edm.String", "filterable": true, "facetable": true, "retrievable": true }
+  ],
+  "vectorSearch": {
+    "algorithms": [
+      { "name": "hnsw-1", "kind": "hnsw", "hnswParameters": { "metric": "cosine" } }
+    ],
+    "profiles": [
+      { "name": "vp", "algorithm": "hnsw-1", "vectorizer": "aoai-vectorizer" }
+    ],
+    "vectorizers": [
+      {
+        "name": "aoai-vectorizer",
+        "kind": "azureOpenAI",
+        "azureOpenAIParameters": {
+          "resourceUri": "https://vercel-ai.openai.azure.com",
+          "deploymentId": "text-embedding-3-large",
+          "modelName": "text-embedding-3-large",
+          "apiKey": "${AOAI_API_KEY}"
+        }
+      }
+    ]
+  },
+  "semantic": {
+    "configurations": [
+      {
+        "name": "default",
+        "prioritizedFields": {
+          "titleField": { "fieldName": "product_name" },
+          "prioritizedContentFields": [ { "fieldName": "statement" } ],
+          "prioritizedKeywordsFields": [ { "fieldName": "category" } ]
+        }
+      }
+    ]
+  }
+}
