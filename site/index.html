@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=980" />
+<title>MeridianHealth, Inc. - Mobility Scooters, Power Wheelchairs &amp; Home Medical Equipment - Billed to Your Insurance</title>
+<meta name="description" content="MeridianHealth sells mobility scooters, power wheelchairs, lift chairs and home medical equipment billed directly to your insurance provider. Free shipping over $99. Visit our Columbus, OH showroom." />
+<meta name="keywords" content="mobility scooters, power wheelchairs, lift chairs, rollators, home medical equipment, insurance billing, Columbus Ohio, MeridianHealth" />
+<style>
+  * { margin: 0; padding: 0; }
+  body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #333;
+    background: #dfe4ea url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Crect width='4' height='4' fill='%23dfe4ea'/%3E%3Crect width='2' height='2' fill='%23dae0e6'/%3E%3Crect x='2' y='2' width='2' height='2' fill='%23dae0e6'/%3E%3C/svg%3E");
+  }
+  a { color: #06c; text-decoration: none; }
+  a:hover { text-decoration: underline; color: #039; }
+  img { border: 0; }
+  h1, h2, h3, h4 { font-family: Georgia, "Times New Roman", serif; color: #1f5c99; }
+  ul { list-style: none; }
+  table { border-collapse: collapse; }
+
+  /* Layout shell */
+  #page {
+    width: 980px;
+    margin: 12px auto 24px;
+    background: #fff;
+    border: 1px solid #b8c2cc;
+    box-shadow: 0 0 8px rgba(0,0,0,.22);
+  }
+
+  /* Buttons - glossy 2013 style */
+  .btn {
+    display: inline-block;
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    border: 1px solid #b6b6b6;
+    border-radius: 4px;
+    background: #f5f5f5;
+    background: linear-gradient(#ffffff, #e3e3e3);
+    text-shadow: 0 1px 0 #fff;
+    cursor: pointer;
+    line-height: 1.4;
+  }
+  .btn:hover { text-decoration: none; background: linear-gradient(#ffffff, #dcdcdc); }
+  .btn-primary {
+    color: #fff;
+    border-color: #24618f;
+    background: linear-gradient(#5a9bd4, #2c72ab);
+    text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+  }
+  .btn-primary:hover { color: #fff; background: linear-gradient(#68a8de, #276499); }
+  .btn-success {
+    color: #fff; border-color: #3c7d3c;
+    background: linear-gradient(#7ac47a, #4e9a4e);
+    text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+  }
+  .btn-success:hover { color: #fff; background: linear-gradient(#86ce86, #468a46); }
+  .btn-catalog {
+    color: #fff;
+    font-size: 13px;
+    padding: 7px 16px;
+    border: 1px solid #b85c00;
+    border-radius: 4px;
+    background: linear-gradient(#ffa733, #ef7c00);
+    text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.4);
+  }
+  .btn-catalog:hover { color: #fff; text-decoration: none; background: linear-gradient(#ffb14d, #e07200); }
+  .btn-lg { font-size: 15px; padding: 10px 22px; }
+
+  /* Top utility bar */
+  #utility {
+    background: #333;
+    color: #bbb;
+    font-size: 11px;
+    padding: 4px 12px;
+    overflow: hidden;
+  }
+  #utility a { color: #fff; }
+  #utility .r { float: right; }
+  #utility .r a { margin-left: 10px; }
+  #utility .cart { color: #ffcf6b; font-weight: bold; }
+
+  /* Masthead */
+  #masthead { padding: 12px; overflow: hidden; border-bottom: 3px solid #1f5c99; }
+  #logo { float: left; }
+  #logo .name { font-family: Georgia, serif; font-size: 27px; font-weight: bold; color: #1f5c99; letter-spacing: -0.5px; }
+  #logo .name span { color: #ef7c00; }
+  #logo .tag { font-style: italic; color: #777; font-size: 11px; margin-top: 2px; }
+  #logo .est { color: #999; font-size: 10px; letter-spacing: .5px; text-transform: uppercase; }
+
+  #headright { float: right; text-align: right; }
+  #phone { font-size: 20px; font-weight: bold; color: #ef7c00; font-family: Arial, sans-serif; }
+  #phone .tf { font-size: 11px; color: #666; font-weight: normal; display: block; letter-spacing: 1px; text-transform: uppercase; }
+  #hours { font-size: 11px; color: #666; margin: 3px 0 8px; }
+  #search input.q { width: 190px; padding: 4px 6px; border: 1px solid #aaa; font-size: 12px; vertical-align: middle; }
+  #search .adv { font-size: 10px; display: block; margin-top: 3px; }
+
+  .accept { margin-top: 8px; font-size: 10px; color: #888; }
+  .cc {
+    display: inline-block; padding: 2px 5px; margin-left: 3px;
+    font-size: 9px; font-weight: bold; color: #fff; border-radius: 2px;
+    font-family: Arial, sans-serif; vertical-align: middle;
+  }
+  .cc-visa { background: #1a1f71; }
+  .cc-mc { background: #cc0000; }
+  .cc-amex { background: #2e77bb; }
+  .cc-disc { background: #f47216; }
+  .cc-pp { background: #003087; }
+
+  /* Nav */
+  #nav {
+    background: linear-gradient(#2f79ba, #1f5c99);
+    border-top: 1px solid #4a90c8;
+    border-bottom: 1px solid #17456f;
+    overflow: hidden;
+  }
+  #nav ul { overflow: hidden; }
+  #nav li { float: left; border-right: 1px solid rgba(255,255,255,.14); }
+  #nav li a {
+    display: block; padding: 9px 13px; color: #fff; font-weight: bold; font-size: 12px;
+  }
+  #nav li a:hover { background: rgba(0,0,0,.16); text-decoration: none; }
+  #nav li.catalog { float: right; border-right: 0; border-left: 1px solid rgba(255,255,255,.14); padding: 4px 8px; }
+
+  /* Announcement marquee */
+  #announce {
+    background: #fff7e6;
+    border-top: 1px solid #f0d9a8;
+    border-bottom: 1px solid #f0d9a8;
+    color: #8a5a00;
+    font-size: 12px;
+    padding: 5px 0;
+  }
+  #announce strong { color: #c0392b; }
+
+  /* Breadcrumb */
+  #crumb {
+    background: #f2f4f6;
+    border-bottom: 1px solid #dde3e8;
+    font-size: 11px;
+    color: #888;
+    padding: 5px 12px;
+  }
+
+  /* Body columns */
+  #body { overflow: hidden; padding: 12px; }
+  #side { float: left; width: 208px; }
+  #main { float: right; width: 736px; }
+
+  /* Panels (sidebar boxes) */
+  .panel { border: 1px solid #c4ccd4; margin-bottom: 14px; background: #fff; }
+  .panel .hd {
+    background: linear-gradient(#5a8fc0, #3d6fa1);
+    color: #fff; font-weight: bold; font-size: 11px;
+    text-transform: uppercase; letter-spacing: .04em;
+    padding: 6px 9px;
+    border-bottom: 1px solid #335f8a;
+  }
+  .panel .bd { padding: 9px; }
+  .catlist li { border-bottom: 1px dotted #ccc; }
+  .catlist li:last-child { border-bottom: 0; }
+  .catlist li a { display: block; padding: 5px 4px 5px 12px; color: #06c; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='9'%3E%3Cpath d='M0 0l6 4.5L0 9z' fill='%23ef7c00'/%3E%3C/svg%3E") no-repeat 2px 8px; }
+  .catlist li a:hover { background-color: #f3f7fb; text-decoration: none; }
+
+  .svc-list li { padding: 4px 0 4px 16px; border-bottom: 1px dotted #ddd; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath d='M1 6l3 3 7-7' stroke='%233c7d3c' stroke-width='2' fill='none'/%3E%3C/svg%3E") no-repeat 0 5px; }
+  .svc-list li:last-child { border-bottom: 0; }
+
+  .hours-tbl td { padding: 2px 6px 2px 0; font-size: 11px; }
+  .hours-tbl td.d { color: #555; }
+  .showroom .addr { font-style: normal; line-height: 1.6; margin-bottom: 6px; }
+  .showroom .closed { color: #c0392b; }
+
+  .help-phone { font-size: 18px; font-weight: bold; color: #ef7c00; }
+  .help-chat { color: #999; }
+
+  .badges { text-align: center; }
+  .badge {
+    display: inline-block; margin: 3px 2px; padding: 5px 7px;
+    border: 1px solid #bcd; border-radius: 3px;
+    background: linear-gradient(#fbfdff, #e8eff6);
+    font-size: 9px; font-weight: bold; color: #2c5f8a; text-transform: uppercase;
+    letter-spacing: .5px;
+  }
+  .badge.ssl { color: #2e7d32; border-color: #b6d7b6; background: linear-gradient(#f4fbf4, #e2f0e2); }
+
+  /* Main banner */
+  #banner {
+    border: 1px solid #c9a95c;
+    background: linear-gradient(#fef9ec, #f8ead0);
+    padding: 18px 20px;
+    overflow: hidden;
+    margin-bottom: 14px;
+  }
+  #banner h1 { font-size: 22px; margin-bottom: 6px; color: #1f5c99; }
+  #banner p { color: #5a4a2a; margin-bottom: 12px; width: 460px; }
+  #banner .side { float: right; text-align: center; width: 190px; }
+  #banner .ship { color: #3c7d3c; font-weight: bold; font-size: 13px; margin-bottom: 6px; }
+  #banner .fin { font-size: 11px; color: #777; margin-top: 8px; }
+
+  /* Welcome text block */
+  .welcome { border: 1px solid #dfe3e7; background: #fafbfc; padding: 12px; margin-bottom: 14px; }
+  .welcome h2 { font-size: 16px; margin-bottom: 5px; }
+  .welcome p { margin-bottom: 8px; }
+
+  /* Section headers */
+  .sec-hd {
+    background: linear-gradient(#eef2f6, #dde5ec);
+    border: 1px solid #c8d0d8;
+    padding: 6px 10px;
+    font-family: Georgia, serif; font-size: 15px; color: #1f5c99; font-weight: bold;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  .sec-hd .more { float: right; font-family: Arial, sans-serif; font-size: 11px; font-weight: normal; padding-top: 3px; }
+
+  /* Product grid */
+  .products { overflow: hidden; margin-bottom: 6px; }
+  .product {
+    float: left; width: 226px; margin: 0 10px 14px 0; border: 1px solid #cdd4db;
+    background: #fff; padding: 8px; text-align: center;
+  }
+  .product:nth-child(3n) { margin-right: 0; }
+  .product .pic {
+    height: 120px; border: 1px solid #e2e6ea; background: #f6f8fa;
+    display: block; margin-bottom: 7px; position: relative;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .product .pic svg { width: 92px; height: 92px; color: #9aa7b3; }
+  .product .pic .sale {
+    position: absolute; top: 4px; left: 4px;
+    background: #c0392b; color: #fff; font-size: 9px; font-weight: bold;
+    padding: 2px 5px; border-radius: 2px; text-transform: uppercase;
+  }
+  .product .name { display: block; font-weight: bold; font-size: 12px; min-height: 30px; }
+  .product .stars { color: #f5a623; font-size: 12px; letter-spacing: 1px; }
+  .product .stars span { color: #ccc; }
+  .product .rc { color: #888; font-size: 10px; }
+  .product .price { margin: 5px 0; }
+  .product .msrp { color: #999; text-decoration: line-through; font-size: 11px; }
+  .product .our { color: #c0392b; font-weight: bold; font-size: 15px; }
+  .product .save { color: #3c7d3c; font-size: 10px; }
+  .product .stock { color: #3c7d3c; font-size: 10px; font-weight: bold; margin-bottom: 6px; }
+  .product .acts a { margin: 0 2px; }
+
+  /* Services */
+  .services { overflow: hidden; margin-bottom: 14px; }
+  .service {
+    float: left; width: 232px; margin: 0 10px 10px 0;
+    border: 1px solid #d5dbe1; background: #fbfcfd; padding: 10px;
+  }
+  .service:nth-child(3n) { margin-right: 0; }
+  .service h3 { font-size: 13px; margin-bottom: 4px; }
+  .service p { color: #555; font-size: 11px; }
+  .service a { font-size: 11px; }
+
+  /* Store visit block */
+  #instore {
+    border: 2px solid #1f5c99; background: #f4f8fc; padding: 14px; overflow: hidden;
+    margin-bottom: 14px;
+  }
+  #instore .map {
+    float: right; width: 240px; height: 150px; border: 1px solid #9bb6cf;
+    background:
+      repeating-linear-gradient(0deg, #e8eef4 0 19px, #dbe4ee 19px 20px),
+      repeating-linear-gradient(90deg, #e8eef4 0 19px, #dbe4ee 19px 20px);
+    position: relative;
+  }
+  #instore .map .pin {
+    position: absolute; left: 108px; top: 60px; width: 16px; height: 16px;
+    background: #c0392b; border: 2px solid #fff; border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg); box-shadow: 0 1px 3px rgba(0,0,0,.4);
+  }
+  #instore h2 { font-size: 17px; margin-bottom: 6px; }
+  #instore .addr { font-style: normal; line-height: 1.7; }
+  #instore .note { color: #555; font-size: 11px; margin-top: 8px; width: 430px; }
+
+  /* Why list */
+  .why { border: 1px solid #dfe3e7; background: #fff; padding: 10px 12px; margin-bottom: 14px; }
+  .why li { padding: 3px 0 3px 18px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath d='M1 6l3 3 7-7' stroke='%233c7d3c' stroke-width='2' fill='none'/%3E%3C/svg%3E") no-repeat 0 5px; }
+
+  /* Footer */
+  #footer { background: #2b2b2b; color: #a8a8a8; padding: 18px 12px; overflow: hidden; font-size: 11px; }
+  #footer .col { float: left; width: 19%; margin-right: 1%; }
+  #footer h4 { color: #fff; font-family: Arial, sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 7px; }
+  #footer a { color: #ccc; }
+  #footer a:hover { color: #fff; }
+  #footer li { padding: 2px 0; }
+  #subfooter {
+    background: #1e1e1e; color: #777; font-size: 10px; padding: 10px 12px;
+    text-align: center; line-height: 1.7;
+  }
+  #subfooter .counter {
+    font-family: "Courier New", monospace; background: #000; color: #3f3;
+    border: 1px solid #444; padding: 1px 5px; letter-spacing: 2px;
+  }
+  #subfooter .disclaimer { color: #999; }
+</style>
+</head>
+<body>
+<div id="page">
+
+  <div id="utility">
+    Welcome, Guest! &nbsp;[<a href="#">Log In</a>] &nbsp; Currency: USD
+    <span class="r">
+      <a href="#">My Account</a> |
+      <a href="#">Order Status</a> |
+      <a href="#">Wish List</a> |
+      <a href="#" class="cart">Cart (0) &mdash; $0.00</a> |
+      <a href="#">Checkout &raquo;</a>
+    </span>
+  </div>
+
+  <div id="masthead">
+    <div id="logo">
+      <div class="name">Meridian<span>Health</span>, Inc.</div>
+      <div class="tag">Mobility &amp; Home Medical Equipment &mdash; Billed Direct to Your Insurance</div>
+      <div class="est">Serving Ohio Families Since 2004</div>
+    </div>
+    <div id="headright">
+      <div id="phone"><span class="tf">Call Us Toll-Free</span>1-800-555-0142</div>
+      <div id="hours">Phone hours: Mon&ndash;Fri 9:00&ndash;6:00 &bull; Sat 10:00&ndash;4:00 ET</div>
+      <form id="search" action="#" onsubmit="return false;">
+        <input type="text" class="q" value="Search 4,200+ products..." onfocus="if(this.value.indexOf('Search')===0)this.value='';" />
+        <button type="submit" class="btn">Go</button>
+        <a href="#" class="adv">Advanced Search</a>
+      </form>
+      <div class="accept">
+        We gladly accept:
+        <span class="cc cc-visa">VISA</span>
+        <span class="cc cc-mc">MC</span>
+        <span class="cc cc-amex">AMEX</span>
+        <span class="cc cc-disc">DISCOVER</span>
+        <span class="cc cc-pp">PayPal</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="nav">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/marketplace/">Shop by Category&nbsp;&#9662;</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#">Financing</a></li>
+      <li><a href="#">Insurance Billing</a></li>
+      <li><a href="#instore">Visit Our Showroom</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#footer">Contact</a></li>
+      <li class="catalog"><a href="/marketplace/" class="btn-catalog">Browse Our Catalog &raquo;</a></li>
+    </ul>
+  </div>
+
+  <div id="announce">
+    <marquee behavior="scroll" direction="left" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();">
+      &#9733; <strong>FREE</strong> ground shipping on orders over $99 &nbsp;&nbsp;&#9733;&nbsp;&nbsp;
+      Now billing 40+ insurance plans &mdash; check your coverage in minutes &nbsp;&nbsp;&#9733;&nbsp;&nbsp;
+      NEW: 0% financing for 12 months on approved credit &nbsp;&nbsp;&#9733;&nbsp;&nbsp;
+      Visit our Columbus showroom &mdash; now open Saturdays &nbsp;&nbsp;&#9733;&nbsp;&nbsp;
+      Free in-home demonstrations available throughout Central Ohio
+    </marquee>
+  </div>
+
+  <div id="crumb">You are here: <a href="/">Home</a></div>
+
+  <div id="body">
+
+    <div id="side">
+
+      <div class="panel">
+        <div class="hd">Shop by Category</div>
+        <div class="bd" style="padding:0">
+          <ul class="catlist">
+            <li><a href="/marketplace/mobility-scooters/">Mobility Scooters</a></li>
+            <li><a href="/marketplace/power-wheelchairs/">Power Wheelchairs</a></li>
+            <li><a href="/marketplace/manual-wheelchairs/">Manual Wheelchairs</a></li>
+            <li><a href="/marketplace/rollators-walkers/">Rollators &amp; Walkers</a></li>
+            <li><a href="/marketplace/lift-chairs/">Lift Chairs &amp; Recliners</a></li>
+            <li><a href="/marketplace/stairlifts/">Stairlifts</a></li>
+            <li><a href="/marketplace/bathroom-safety/">Bathroom Safety</a></li>
+            <li><a href="/marketplace/ramps/">Wheelchair Ramps</a></li>
+            <li><a href="/marketplace/bed-patient-aids/">Bed &amp; Patient Aids</a></li>
+            <li><a href="/marketplace/parts-accessories/">Parts &amp; Accessories</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="hd">Our Services</div>
+        <div class="bd">
+          <ul class="svc-list">
+            <li>Free In-Home Assessment</li>
+            <li>Delivery &amp; Professional Setup</li>
+            <li>Repairs &amp; Loaner Program</li>
+            <li>Insurance Verification &amp; Billing</li>
+            <li>0% Financing (O.A.C.)</li>
+            <li>Trade-In &amp; Recycling</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="panel showroom">
+        <div class="hd">Visit Our Showroom</div>
+        <div class="bd">
+          <address class="addr">
+            200 North High Street<br />
+            Columbus, OH 43215
+          </address>
+          <table class="hours-tbl">
+            <tr><td class="d">Mon&ndash;Fri</td><td>9:00 AM &ndash; 6:00 PM</td></tr>
+            <tr><td class="d">Saturday</td><td>10:00 AM &ndash; 4:00 PM</td></tr>
+            <tr><td class="d">Sunday</td><td class="closed">Closed</td></tr>
+          </table>
+          <p style="margin-top:6px"><a href="#">Get Directions &raquo;</a></p>
+          <p style="color:#666;margin-top:4px">Free parking in rear. Wheelchair-accessible entrance on Elm St.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="hd">Need Help?</div>
+        <div class="bd" style="text-align:center">
+          <div class="help-phone">1-800-555-0142</div>
+          <p style="margin:3px 0"><a href="#" class="help-chat">Live Chat (offline)</a></p>
+          <p><a href="mailto:help@meridianhealth.example">help@meridianhealth.example</a></p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="hd">Shop With Confidence</div>
+        <div class="bd badges">
+          <span class="badge ssl">SSL Secured</span>
+          <span class="badge">BBB A+ Rating</span>
+          <span class="badge">HIPAA Compliant</span>
+          <span class="badge ssl">256-bit Encryption</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="main">
+
+      <div id="banner">
+        <div class="side">
+          <div class="ship">&#10003; FREE Shipping<br />on orders over $99</div>
+          <a href="/marketplace/" class="btn-catalog btn-lg">Browse Our Catalog &raquo;</a>
+          <div class="fin">or call to order by phone</div>
+        </div>
+        <h1>The Right Mobility Equipment &mdash; Billed Directly to Your Insurance</h1>
+        <p>MeridianHealth works with your insurance provider so eligible members receive scooters, power
+        wheelchairs, lift chairs and daily-living aids with the claims paperwork handled for you.
+        Available to members of our participating plans.</p>
+        <a href="/marketplace/" class="btn-primary btn">Shop the Full Catalog</a>
+        &nbsp; <a href="#services">See Our Services</a> &nbsp;|&nbsp; <a href="#instore">Visit the Showroom</a>
+      </div>
+
+      <div class="welcome">
+        <h2>Welcome to MeridianHealth</h2>
+        <p>For nearly twenty years, families across Central Ohio have trusted MeridianHealth for mobility
+        and home medical equipment. We are a full-service dealer &mdash; that means we do not just take
+        your order, we verify your insurance benefits, deliver and assemble your equipment, train you on
+        how to use it, and service it for as long as you own it.</p>
+        <p>Not sure which product is right for you? Call <strong>1-800-555-0142</strong> to speak with a
+        certified Assistive Technology Professional, or <a href="#instore">stop by our showroom</a> to try
+        equipment in person. We also offer <a href="#services">free in-home demonstrations</a> throughout
+        the Columbus metro area.</p>
+      </div>
+
+      <div class="sec-hd">
+        Featured Products
+        <span class="more"><a href="/marketplace/">View all products &raquo;</a></span>
+      </div>
+      <div class="products">
+
+        <div class="product">
+          <span class="pic">
+            <span class="sale">Save 18%</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="18" r="2.4"/><circle cx="18" cy="18" r="2.4"/><path d="M8.4 18h7.2M15 18l-2-7H9.5M13 11h3M16 11l2 5M9.5 11 8 7.5H6M12 11V7.5h3.5"/></svg>
+          </span>
+          <a href="/marketplace/aspire-elio-small-scooter/" class="name">Aspire Elio Small Travel Scooter</a>
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;<span>&#9733;</span></div>
+          <div class="rc">(24 reviews)</div>
+          <div class="price">
+            <span class="msrp">MSRP: $1,699.00</span><br />
+            <span class="our">Our Price: $1,395.00</span><br />
+            <span class="save">You Save $304.00</span>
+          </div>
+          <div class="stock">&#10003; In Stock &mdash; Ships in 1&ndash;2 days</div>
+          <div class="acts">
+            <a href="#" class="btn btn-success">Add to Cart</a>
+            <a href="/marketplace/aspire-elio-small-scooter/" class="btn">Details</a>
+          </div>
+        </div>
+
+        <div class="product">
+          <span class="pic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="17" r="3.2"/><path d="M10 8v6h5l2 3M10 8h4M6.5 6.5 8 8M17 20h2"/></svg>
+          </span>
+          <a href="/marketplace/meridian-power-chair-200/" class="name">Meridian Power Chair 200 (Indoor)</a>
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="rc">(51 reviews)</div>
+          <div class="price">
+            <span class="msrp">MSRP: $2,450.00</span><br />
+            <span class="our">Our Price: $2,199.00</span><br />
+            <span class="save">You Save $251.00</span>
+          </div>
+          <div class="stock">&#10003; In Stock</div>
+          <div class="acts">
+            <a href="#" class="btn btn-success">Add to Cart</a>
+            <a href="/marketplace/meridian-power-chair-200/" class="btn">Details</a>
+          </div>
+        </div>
+
+        <div class="product">
+          <span class="pic">
+            <span class="sale">New</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4 5 20M17 4l2 16M6 9h12M5.5 15h13"/><circle cx="4.5" cy="20" r="1.6"/><circle cx="19.5" cy="20" r="1.6"/></svg>
+          </span>
+          <a href="/marketplace/everyday-rollator-seat/" class="name">Everyday Rollator with Padded Seat</a>
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;<span>&#9733;</span></div>
+          <div class="rc">(88 reviews)</div>
+          <div class="price">
+            <span class="msrp">MSRP: $229.00</span><br />
+            <span class="our">Our Price: $164.00</span><br />
+            <span class="save">You Save $65.00</span>
+          </div>
+          <div class="stock">&#10003; In Stock</div>
+          <div class="acts">
+            <a href="#" class="btn btn-success">Add to Cart</a>
+            <a href="/marketplace/everyday-rollator-seat/" class="btn">Details</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="sec-hd" id="services">Our Services</div>
+      <div class="services">
+        <div class="service">
+          <h3>Insurance Verification &amp; Billing</h3>
+          <p>We confirm your benefits and bill Medicare, Medicaid and most private plans directly.
+          You will know your out-of-pocket cost before anything ships.</p>
+          <a href="#">Check your coverage &raquo;</a>
+        </div>
+        <div class="service">
+          <h3>Free In-Home Assessment</h3>
+          <p>An Assistive Technology Professional visits your home to measure doorways, review your
+          needs and recommend the right equipment &mdash; at no charge.</p>
+          <a href="#">Schedule a visit &raquo;</a>
+        </div>
+        <div class="service">
+          <h3>Delivery &amp; Setup</h3>
+          <p>Every powered device is delivered, assembled, adjusted to fit and demonstrated by our
+          technicians. We haul away the packaging.</p>
+          <a href="#">Service area &raquo;</a>
+        </div>
+        <div class="service">
+          <h3>Repairs &amp; Loaners</h3>
+          <p>In-house repair shop for all major brands. Ask about our loaner program so you are never
+          without mobility while your equipment is serviced.</p>
+          <a href="#">Request service &raquo;</a>
+        </div>
+        <div class="service">
+          <h3>Financing (0% O.A.C.)</h3>
+          <p>Spread the cost of non-covered items over 6, 12 or 24 months with approved credit.
+          Apply in the showroom or over the phone.</p>
+          <a href="#">Financing options &raquo;</a>
+        </div>
+        <div class="service">
+          <h3>Trade-In &amp; Recycling</h3>
+          <p>Upgrading? Bring in your old scooter or wheelchair for a store credit. We recycle or
+          refurbish equipment we cannot resell.</p>
+          <a href="#">Trade-in form &raquo;</a>
+        </div>
+      </div>
+
+      <div id="instore">
+        <div class="map" aria-hidden="true"><span class="pin"></span></div>
+        <h2>Visit Us In Store</h2>
+        <address class="addr">
+          <strong>MeridianHealth Showroom</strong><br />
+          200 North High Street, Columbus, OH 43215<br />
+          Phone: 1-800-555-0142<br />
+          Mon&ndash;Fri 9:00&ndash;6:00 &bull; Sat 10:00&ndash;4:00 &bull; Sun Closed
+        </address>
+        <p class="note">Our 4,000 sq. ft. showroom has scooters, power chairs and lift chairs set up
+        and charged so you can try before you buy. Certified staff on site daily. Free customer
+        parking in the rear lot, with a wheelchair-accessible entrance on Elm Street.</p>
+        <p style="margin-top:8px"><a href="#" class="btn btn-primary">Get Directions</a>
+        &nbsp; <a href="#" class="btn">Book an Appointment</a></p>
+      </div>
+
+      <div class="sec-hd">Why Buy From MeridianHealth?</div>
+      <ul class="why">
+        <li>Family-owned and operated in Columbus since 2004</li>
+        <li>Direct billing to Medicare, Medicaid and 40+ private insurance plans</li>
+        <li>Certified Assistive Technology Professionals on staff</li>
+        <li>Free local delivery, setup and training on all powered equipment</li>
+        <li>In-house service department &mdash; we fix what we sell</li>
+        <li>Price-match guarantee on identical in-stock items</li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <div id="footer">
+    <div class="col">
+      <h4>Customer Service</h4>
+      <ul>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Order Status</a></li>
+        <li><a href="#">Shipping &amp; Returns</a></li>
+        <li><a href="#">Warranty Claims</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>About Us</h4>
+      <ul>
+        <li><a href="#">Our Story</a></li>
+        <li><a href="#instore">Showroom &amp; Hours</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Testimonials</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>My Account</h4>
+      <ul>
+        <li><a href="#">Log In / Register</a></li>
+        <li><a href="#">Order History</a></li>
+        <li><a href="#">Wish List</a></li>
+        <li><a href="#">Address Book</a></li>
+        <li><a href="#">Reorder Supplies</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="/marketplace/">Full Catalog</a></li>
+        <li><a href="/marketplace/mobility-scooters/">Mobility Scooters</a></li>
+        <li><a href="/marketplace/power-wheelchairs/">Power Wheelchairs</a></li>
+        <li><a href="/marketplace/lift-chairs/">Lift Chairs</a></li>
+        <li><a href="#">Clearance</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>Insurance</h4>
+      <ul>
+        <li><a href="#">Participating Plans</a></li>
+        <li><a href="#">Check Eligibility</a></li>
+        <li><a href="#">Medicare &amp; Medicaid</a></li>
+        <li><a href="#">Documentation</a></li>
+        <li><a href="#">Billing Questions</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="subfooter">
+    We accept
+    <span class="cc cc-visa">VISA</span>
+    <span class="cc cc-mc">MC</span>
+    <span class="cc cc-amex">AMEX</span>
+    <span class="cc cc-disc">DISCOVER</span>
+    <span class="cc cc-pp">PayPal</span>
+    &nbsp;&bull;&nbsp; SSL Secured Checkout<br />
+    &copy; 2014&ndash;2026 MeridianHealth, Inc. &mdash; 200 North High Street, Columbus, OH 43215 &mdash; 1-800-555-0142.
+    All rights reserved. Prices and availability subject to change without notice.
+    <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Accessibility Statement</a> | <a href="#">Site Map</a><br />
+    You are visitor <span class="counter">00427,318</span> &nbsp;&bull;&nbsp; Site design by Buckeye Web Solutions, LLC<br />
+    <span class="disclaimer">MeridianHealth is a fictional company. This website exists for demonstration purposes only and does not sell products or process orders.</span>
+  </div>
+
+</div>
+</body>
+</html>
