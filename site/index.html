@@ -725,7 +725,20 @@
       <p class="dlg-intro">The MeridianHealth catalog is available to members of our participating
       insurance plans. Choose a demonstration account to continue:</p>
 
-      <a class="persona" href="/marketplace/?persona=modern-mark">
+      <!--
+        Persona links hand off to the Modern Marketplace demo-login endpoint:
+          GET <origin>/api/demo-login?persona=<modern-mark|legacy-luke>
+        which sets an mm_session cookie and 302-redirects to the catalog.
+        This is a plain top-level navigation (GET), so no CORS is involved.
+
+        Swap this ONE origin per environment:
+          local dev : http://localhost:3000
+          production: https://moderncatalog.vercel.app   (current)
+        If the storefront is ever served under the same domain as the app
+        (reverse-proxying /marketplace/* to moderncatalog), change these to a
+        root-relative path and drop the origin.
+      -->
+      <a class="persona" href="https://moderncatalog.vercel.app/api/demo-login?persona=modern-mark">
         <span class="ava" style="background:#1f6fb2">MM</span>
         <span class="ptext">
           <strong>Sign in as Modern Mark</strong>
@@ -734,7 +747,7 @@
         </span>
       </a>
 
-      <a class="persona" href="/marketplace/?persona=legacy-luke">
+      <a class="persona" href="https://moderncatalog.vercel.app/api/demo-login?persona=legacy-luke">
         <span class="ava" style="background:#6a8f2f">LL</span>
         <span class="ptext">
           <strong>Sign in as Legacy Luke</strong>
